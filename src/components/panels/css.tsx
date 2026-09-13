@@ -2,8 +2,8 @@
 
 import { Button } from "@base-ui/react";
 import Editor from "@monaco-editor/react";
-import { NavArrowUp } from "iconoir-react";
 import { useEffect, useRef, useState } from "react";
+import { NavArrowUp } from "@/icons";
 
 interface GeneratedCSSPanelProps {
   iframeRef: React.RefObject<HTMLIFrameElement | null>;

@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@base-ui/react";
-import { NavArrowDown } from "iconoir-react";
 import type React from "react";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -15,6 +14,7 @@ import GeneratedCSSPanel from "@/components/panels/css";
 import MonacoEditor from "@/components/panels/editor";
 import Preview from "@/components/panels/preview";
 import { initialCode } from "@/constants/code";
+import { NavArrowDown } from "@/icons";
 import { getEmbedCodeFromUrl } from "@/utils/share";
 
 const Home: React.FC = () => {
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
     return (
       <div className="d-f ai-c jc-c h-dvh bg-surface c-white">
         <div className="ta-c">
-          <div className="fs-lg">Loading...</div>
+          <div className="fs-lg">Loading…</div>
         </div>
       </div>
     );

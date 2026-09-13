@@ -1,11 +1,11 @@
 "use client";
 
 import { Button } from "@base-ui/react";
-import { Check, Copy, LinkSlash } from "iconoir-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import ShortcutsDialog from "@/components/shortcuts-dialog";
 import { initialCode } from "@/constants/code";
+import { Check, Copy, LinkSlash } from "@/icons";
 import { copyToClipboard, createShareUrl } from "@/utils/share";
 
 type ShareState = "idle" | "success" | "error";

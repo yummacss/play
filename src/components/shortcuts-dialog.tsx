@@ -3,11 +3,11 @@
 import { Button } from "@base-ui/react";
 import { Dialog } from "@base-ui/react/dialog";
 import { YummaCSS } from "@react-symbols/icons";
-import { InfoCircle, Xmark } from "iconoir-react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { SiGithub, SiX, SiYoutube } from "react-icons/si";
+import { InfoCircle, Xmark } from "@/icons";
 
 interface ShortcutsDialogProps {
   onShare: () => void;
