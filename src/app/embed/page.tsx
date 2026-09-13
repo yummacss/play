@@ -1,11 +1,11 @@
 "use client";
 
-import { OpenNewWindow } from "iconoir-react";
 import type React from "react";
 import { useEffect, useRef, useState } from "react";
 import MonacoEditor from "@/components/panels/editor";
 import Preview from "@/components/panels/preview";
 import { embedCode } from "@/constants/code";
+import { OpenNewWindow } from "@/icons";
 import { getEmbedCodeFromUrl } from "@/utils/share";
 
 /**
@@ -30,7 +30,7 @@ const Embed: React.FC = () => {
   if (isLoading) {
     return (
       <div className="d-f ai-c jc-c h-dvh bg-surface c-white">
-        <div className="fs-lg">Loading...</div>
+        <div className="fs-lg">Loading…</div>
       </div>
     );
   }

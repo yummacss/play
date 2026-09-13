@@ -13,6 +13,23 @@
 - No em dashes.
 - Never name another framework to explain a Yumma decision.
 
+# Icons
+
+- One module, `src/icons.ts`, re-exporting every icon this repo uses. Nothing
+  else imports `iconoir-react` directly, so changing library is one edit.
+- Per repo, never shared across them. The docs site has its own module with
+  its own icons; this is not that one.
+- `tests/icons.test.ts` holds the rule, including that the module re-exports
+  nothing the app stopped using.
+
+# Copy
+
+- The prose rules live in `tests/copywriting.test.ts` and run over the strings
+  and JSX text the playground puts on screen. US spelling, no contractions, no
+  em dashes, `cannot` as one word, one ellipsis character, never Tailwind,
+  and focus draws an outline rather than a ring.
+- Each repo owns its copy of the rules rather than importing them.
+
 # Working
 
 - PRs, never direct commits to `main`.
