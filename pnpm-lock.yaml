@@ -31,8 +31,8 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0(next@16.2.12(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(react@19.2.8)
       '@yummacss/intellisense':
-        specifier: ^3.31.0
-        version: 3.31.0
+        specifier: ^3.31.1
+        version: 3.31.1
       emmet-monaco-es:
         specifier: ^5.7.0
         version: 5.7.0(monaco-editor@0.56.0)
@@ -77,11 +77,11 @@ importers:
         specifier: ^19.2.3
         version: 19.2.3(@types/react@19.2.17)
       '@yummacss/canon':
-        specifier: ^3.31.0
-        version: 3.31.0
+        specifier: ^3.31.1
+        version: 3.31.1
       '@yummacss/postcss':
-        specifier: ^3.31.0
-        version: 3.31.0(postcss@8.4.31)
+        specifier: ^3.31.1
+        version: 3.31.1(postcss@8.5.28)
       sort-package-json:
         specifier: ^4.0.0
         version: 4.0.0
@@ -92,8 +92,8 @@ importers:
         specifier: ^4.1.10
         version: 4.1.11(@types/node@26.1.2)(vite@8.3.0(@types/node@26.1.2))
       yummacss:
-        specifier: ^3.31.0
-        version: 3.31.0
+        specifier: ^3.31.1
+        version: 3.31.1
 
 packages:
 
@@ -666,21 +666,21 @@ packages:
   '@vitest/utils@4.1.11':
     resolution: {integrity: sha512-zTCVGpyFsGWBhllOyKlTw/vnr6D9qxsfSDyfbyZmTyjHw5N/VuvzHpHoQjm2ZJzn4RJgx5w4r7V0er69CmLgPQ==}
 
-  '@yummacss/canon@3.31.0':
-    resolution: {integrity: sha512-JgL8xIvQ652+I+hOHppDetxyTjB+/5f3eqaa5puHDrRkBMUtRw4KFEtU+3Bi/UNckjLFBdx5nCGPg691jmfjSw==}
+  '@yummacss/canon@3.31.1':
+    resolution: {integrity: sha512-jhCdWRr7ii20sLo2FWgttusNcYdCkLtzhEpwUV4lVMvk6CCr/sMBda/2SQI0SJ7FAeoHcUC2m+3IrE/omY8Lkg==}
     hasBin: true
 
-  '@yummacss/core@3.31.0':
-    resolution: {integrity: sha512-ntg1WxrQ4jdgGK1yQIK855oxkSu+1R6FK/k7X3hlcxvO+dPjp50VxwZDUDKELM19sBVdSmrd2nKsyYpEGEefaw==}
+  '@yummacss/core@3.31.1':
+    resolution: {integrity: sha512-GCgvpP5KI+gsZdLI1XD444yHy4iqLFRY5MZfgg6HEkfd9Km3sey/rWQ8k1OiUkfnziIJe+b4UrWK43f78jGUdA==}
 
-  '@yummacss/intellisense@3.31.0':
-    resolution: {integrity: sha512-/piGaIj3k2PuH0W49qTCJGsWalxbcq8snutC/ta0c+9GBOfh7jaTpuLlhVeDmk/QNMt1T+y4BCZVq6AuiNZsow==}
+  '@yummacss/intellisense@3.31.1':
+    resolution: {integrity: sha512-VZ46A2lGpclJvktDlRVU+wNWoF48zVSKySdmaNP4CXH2C2m61M0tqtJOu8Bgn+51mpJXrqaAotnfRDz1fXPFwA==}
 
-  '@yummacss/nitro@3.31.0':
-    resolution: {integrity: sha512-PuIkC10i8abBb2wryeKgNguNVcMIf24bMSGjaCk623n8G87+td6MNdtrsvRpmp6I9i2Opz+qSuKHCGFd7xlifA==}
+  '@yummacss/nitro@3.31.1':
+    resolution: {integrity: sha512-Ys1MNEea5rfmryi/EiljB1Ckb2NyHY+FIdvJNnINtLbTzbgnvdeP0L0NOEy6OZFczaUSV/ukB1RW5Ppicm6V/w==}
 
-  '@yummacss/postcss@3.31.0':
-    resolution: {integrity: sha512-XqyJBNwzViHDmMKP8rfzAC4KkYvMa6fMSjTe3ZnT3bMPLUPiGoK9SFDerDH56ctOIqLmGZ8ryrQL5i2H7PyKgw==}
+  '@yummacss/postcss@3.31.1':
+    resolution: {integrity: sha512-z+fqddH5q2ok7Fxc8IccP+yW52hIsV57Oax1xDqBa5tzSRBoWWJ/3+UT2UdUXTqANo7Tt7E2utzHrIM3aRGatg==}
     peerDependencies:
       postcss: ^8.0.0
 
@@ -1147,12 +1147,12 @@ packages:
     engines: {node: '>=8'}
     hasBin: true
 
-  yummacss@3.31.0:
-    resolution: {integrity: sha512-CDGphg3C9o3Kty9YsM4l3QZvWYRMzyLcqJk5XpouSK7ojlv5wQSxmNf0YIeOl4p+i6jGuPCWaPocBCebjzebZQ==}
+  yummacss@3.31.1:
+    resolution: {integrity: sha512-QZYfjpMLOW4KxnuQsbmv6OF8boGF9cnWHWSa3ctmLzxqrZcfdkORe7+PeJVtXol3KIzIGYVYYGICUc/MQ+Zegw==}
     hasBin: true
 
-  zod@4.5.4:
-    resolution: {integrity: sha512-sC95tT5iHHH9gtpj6A81kh+NEaRAUFN+qlUPDUbRfOMvNf5QCBqsb3WgvnpVtK5Y+4UfA6KqufotuTvMGiTlsA==}
+  zod@4.6.2:
+    resolution: {integrity: sha512-lh5RCAGFa1Cm2hjtNwLQhSs/AsqdWnTQaBER9fEwN/88pSh7KOtJavtBx/0VlkN/uFd61SwYmljLMDAsHlvzBQ==}
 
 snapshots:
 
@@ -1531,29 +1531,29 @@ snapshots:
       convert-source-map: 2.0.0
       tinyrainbow: 3.1.1
 
-  '@yummacss/canon@3.31.0':
+  '@yummacss/canon@3.31.1':
     dependencies:
-      '@yummacss/nitro': 3.31.0
+      '@yummacss/nitro': 3.31.1
       tinyglobby: 0.2.17
 
-  '@yummacss/core@3.31.0': {}
+  '@yummacss/core@3.31.1': {}
 
-  '@yummacss/intellisense@3.31.0':
+  '@yummacss/intellisense@3.31.1':
     dependencies:
-      '@yummacss/core': 3.31.0
-      '@yummacss/nitro': 3.31.0
+      '@yummacss/core': 3.31.1
+      '@yummacss/nitro': 3.31.1
       tinycolor2: 1.6.0
 
-  '@yummacss/nitro@3.31.0':
+  '@yummacss/nitro@3.31.1':
     dependencies:
-      '@yummacss/core': 3.31.0
+      '@yummacss/core': 3.31.1
       tinyglobby: 0.2.17
-      zod: 4.5.4
+      zod: 4.6.2
 
-  '@yummacss/postcss@3.31.0(postcss@8.4.31)':
+  '@yummacss/postcss@3.31.1(postcss@8.5.28)':
     dependencies:
-      '@yummacss/nitro': 3.31.0
-      postcss: 8.4.31
+      '@yummacss/nitro': 3.31.1
+      postcss: 8.5.28
 
   assertion-error@2.0.1: {}
 
@@ -1915,9 +1915,9 @@ snapshots:
       siginfo: 2.0.0
       stackback: 0.0.2
 
-  yummacss@3.31.0:
+  yummacss@3.31.1:
     dependencies:
-      '@yummacss/core': 3.31.0
-      '@yummacss/nitro': 3.31.0
+      '@yummacss/core': 3.31.1
+      '@yummacss/nitro': 3.31.1
 
-  zod@4.5.4: {}
+  zod@4.6.2: {}
