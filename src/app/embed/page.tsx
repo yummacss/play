@@ -8,14 +8,6 @@ import { embedCode } from "@/constants/code";
 import { OpenNewWindow } from "@/icons";
 import { getEmbedCodeFromUrl } from "@/utils/share";
 
-/**
- * A playground stripped down to fit in someone else's page.
- *
- * No navbar, no share button, no generated-CSS panel & no resizable splits:
- * an embed is a demo, not a workspace, and every control here is one more
- * thing to explain before the point lands. The escape hatch to the real
- * playground carries the current code with it, so nothing typed is lost.
- */
 const Embed: React.FC = () => {
   const [code, setCode] = useState<string>(embedCode);
   const [isLoading, setIsLoading] = useState(true);
@@ -37,11 +29,6 @@ const Embed: React.FC = () => {
 
   return (
     <div className="d-f fd-c h-dvh bg-page">
-      {/*
-       * Stacked below the `md` breakpoint. The media query resolves against
-       * the iframe's own width, not the host page's, so a narrow embed in a
-       * wide page stacks correctly.
-       */}
       <div className="d-f fd-c o-h f-1 @md:fd-r">
         <div className="o-h h-50% @md:h-100% @md:w-50%">
           <MonacoEditor code={code} onChange={setCode} />

@@ -28,26 +28,15 @@ const Home: React.FC = () => {
   const editorRef = useRef<any>(null);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
-  // Accepts `#share/<compressed>` as before, plus the `?code=` form the
-  // /embed route hands over when someone opens an embed in the full
-  // playground.
   useEffect(() => {
     const sharedCode = getEmbedCodeFromUrl();
     if (sharedCode) setCode(sharedCode);
     setIsLoading(false);
   }, []);
 
-  // v4 never fires onResize - not for drags, keyboard resizes, or imperative
-  // collapse/expand - so the panel's own size is the only reliable signal for
-  // whether the collapsed bar should show.
-
-  // "50%" not 50: v4 reads bare numbers as pixels, strings as percentages.
   const handleResetLayout = () => editorPanelRef.current?.resize("50%");
   const handleFullPreview = () => editorPanelRef.current?.collapse();
 
-  // isCollapsed() is the source of truth for direction: v4 never fires
-  // onResize, so cssPanelOpen alone would drift. The Group's onLayoutChange
-  // covers drag-driven collapses; this covers the button.
   const handleToggleCSSPanel = () => {
     const panel = cssPanelRef.current;
     if (!panel) return;
@@ -74,11 +63,6 @@ const Home: React.FC = () => {
   return (
     <div className="h-dvh">
       <Group orientation="horizontal" className="h-100%">
-        {/* Left column */}
-        {/*
-         * collapsible is required for handleFullPreview: v4 ignores collapse()
-         * on a panel that cannot collapse, so without it the button no-ops.
-         */}
         <Panel
           panelRef={editorPanelRef}
           collapsible
@@ -86,10 +70,6 @@ const Home: React.FC = () => {
           minSize="20%"
           defaultSize="50%"
         >
-          {/*
-           * Navbar sits OUTSIDE the vertical Group so the CSS panel
-           * can expand all the way up to the navbar's bottom edge.
-           */}
           <div className="d-f fd-c h-100%">
             <Navbar
               code={code}
@@ -98,18 +78,14 @@ const Home: React.FC = () => {
               onFullPreview={handleFullPreview}
             />
 
-            {/* Vertical split: editor on top, CSS panel on bottom */}
             <div className="o-h f-1">
               <Group
                 orientation="vertical"
                 className="h-100%"
-                // Keeps the collapsed bar in sync when the panel is dragged
-                // shut, which the button handler cannot see.
                 onLayoutChange={(layout) =>
                   setCssPanelOpen((layout.css ?? 0) > 0)
                 }
               >
-                {/* Editor */}
                 <Panel minSize="0%" defaultSize="78%">
                   <MonacoEditor
                     code={code}
@@ -120,10 +96,8 @@ const Home: React.FC = () => {
                   />
                 </Panel>
 
-                {/* Vertical resize handle */}
                 <Separator className="h-px bg-border c-rr" />
 
-                {/* CSS panel: collapsible, starts collapsed */}
                 <Panel
                   id="css"
                   panelRef={cssPanelRef}
@@ -140,7 +114,6 @@ const Home: React.FC = () => {
               </Group>
             </div>
 
-            {/* Collapsed bar: only rendered when panel is fully collapsed */}
             {!cssPanelOpen && (
               <Button
                 type="button"
@@ -156,10 +129,8 @@ const Home: React.FC = () => {
           </div>
         </Panel>
 
-        {/* Horizontal resize handle */}
         <Separator className="w-px bg-border c-cr" />
 
-        {/* Preview pane */}
         <Panel defaultSize="50%" minSize="20%" maxSize="80%">
           <Preview ref={iframeRef} code={code} />
         </Panel>

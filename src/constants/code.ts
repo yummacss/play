@@ -11,15 +11,6 @@ export const initialCode: string = `<div class="d-f fd-c ai-c jc-c min-h-vh px-6
   </div>
 </div>`;
 
-/**
- * Default snippet for the `/embed` route.
- *
- * Deliberately different from `initialCode`: an embed is usually somebody's
- * first contact with the syntax, so this one is built to be read against the
- * CSS it compiles to. Every class here is a property most people already know
- * - `jc-sb` is `justify-content: space-between`, `br-md` is `border-radius` -
- * which is the whole claim, demonstrated rather than asserted.
- */
 export const embedCode: string = `<div class="d-f fd-c g-4 p-8 bg-white">
   <div class="d-f ai-c jc-sb">
     <h1 class="c-gray-12 fs-xl fw-600">Yumma CSS</h1>
