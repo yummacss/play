@@ -31,9 +31,7 @@ export function GeneratedCSSPanel({
         const utilStyle = doc.querySelector("style[data-yummacss]");
         const next = utilStyle?.textContent?.trim() ?? "";
         setCSS((prev) => (prev === next ? prev : next));
-      } catch {
-        // cross-origin guard
-      }
+      } catch {}
     }
 
     function attachObserver() {
@@ -59,9 +57,7 @@ export function GeneratedCSSPanel({
             subtree: true,
           });
         }
-      } catch {
-        // ignore
-      }
+      } catch {}
     }
 
     intervalRef.current = setInterval(extractCSS, 300);
@@ -87,7 +83,6 @@ export function GeneratedCSSPanel({
 
   return (
     <div className="d-f fd-c h-100%">
-      {/* Header: entire row is the toggle button */}
       <Button
         type="button"
         onClick={onToggle}
@@ -105,7 +100,6 @@ export function GeneratedCSSPanel({
         )}
       </Button>
 
-      {/* Monaco CSS viewer */}
       <div className="o-h f-1">
         {css ? (
           <Editor

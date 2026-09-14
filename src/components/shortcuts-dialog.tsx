@@ -57,7 +57,6 @@ const ShortcutsDialog = ({
     }, 100);
   };
 
-  // handle keyboard shortcuts when dialog is closed and editor is not focused
   useEffect(() => {
     if (open) return;
 

@@ -12,7 +12,6 @@ export async function POST(req: Request) {
 
     const id = createHash("sha256").update(code).digest("hex").slice(0, 10);
 
-    // Only write if this exact content hasn't been stored before
     await kv.set(`share:${id}`, code, { nx: true });
 
     return NextResponse.json({ id });

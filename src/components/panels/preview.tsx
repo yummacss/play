@@ -6,9 +6,6 @@ interface PreviewProps {
   code: string;
 }
 
-// Pinned deliberately. Unversioned, this tracked `latest`, so the playground's
-// behaviour could change with no deploy and no commit. `next.config.ts` reads
-// the number off the `yummacss` devDependency, so the pin moves with it.
 const RUNTIME_VERSION = process.env.NEXT_PUBLIC_RUNTIME_VERSION;
 
 const Preview = forwardRef<HTMLIFrameElement, PreviewProps>(({ code }, ref) => {

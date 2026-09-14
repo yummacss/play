@@ -102,7 +102,6 @@ const Navbar = ({
       />
 
       <div className="d-f ai-c g-2">
-        {/* Share Button */}
         <Button
           type="button"
           onClick={handleShare}
@@ -112,7 +111,6 @@ const Navbar = ({
           <span>{getShareLabel()}</span>
         </Button>
 
-        {/* Shortcuts Dialog */}
         <ShortcutsDialog
           onShare={handleShare}
           onResetLayout={onResetLayout}
