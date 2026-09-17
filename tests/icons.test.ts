@@ -3,12 +3,6 @@ import { join, relative } from "node:path";
 import { describe, expect, it } from "vitest";
 import { rootDir, sourcesIn } from "./helpers";
 
-/**
- * `src/icons.ts` is the playground's single icon import, so changing icon
- * library is one edit. The docs site has the same rule and its own module;
- * this is not that one shared across repos.
- */
-
 const DIRECT = /from\s+["']iconoir-react["']/;
 
 describe("icons", () => {
@@ -50,8 +44,6 @@ describe("icons", () => {
     expect(wanted.size).toBeGreaterThan(5);
   });
 
-  // An icon re-exported and then dropped from the app is dead weight the next
-  // person has to check before removing.
   it("re-exports nothing the app does not ask for", () => {
     const used = app.map((file) => readFileSync(file, "utf8")).join("\n");
     const exported = [
