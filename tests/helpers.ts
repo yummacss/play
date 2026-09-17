@@ -2,10 +2,8 @@ import { readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
-/** Repo root, resolved from this file rather than `process.cwd()`. */
 export const rootDir = join(dirname(fileURLToPath(import.meta.url)), "..");
 
-/** Absolute paths of every `.ts`/`.tsx` file below `dir`, recursively. */
 export function sourcesIn(dir: string): string[] {
   const out: string[] = [];
 
