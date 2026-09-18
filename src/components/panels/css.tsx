@@ -82,25 +82,25 @@ export function GeneratedCSSPanel({
   const byteSize = new TextEncoder().encode(css).length;
 
   return (
-    <div className="d-f fd-c h-100%">
+    <div className="d:f fd:c h:100%">
       <Button
         type="button"
         onClick={onToggle}
-        className="d-f ai-c g-2 fs-0 px-3 w-100% h-8 bc-border bg-page btw-1 bbw-1 bw-0 c-p"
+        className="d:f ai:c g:2 fs:0 px:3 w:100% h:8 bc:border bg:page btw:1 bbw:1 bw:0 c:p"
         title="Collapse panel"
       >
-        <NavArrowUp className="c-muted" />
+        <NavArrowUp className="c:muted" />
 
-        <span className="c-accent-dim ff-m tt-u ls-4 fw-500 fs-xs">
+        <span className="c:accent-dim ff:m tt:u ls:4 fw:500 fs:xs">
           Generated CSS
         </span>
 
         {css && (
-          <span className="c-muted-dim ff-m fs-xs">{formatSize(byteSize)}</span>
+          <span className="c:muted-dim ff:m fs:xs">{formatSize(byteSize)}</span>
         )}
       </Button>
 
-      <div className="o-h f-1">
+      <div className="o:h f:1">
         {css ? (
           <Editor
             value={css}
@@ -122,7 +122,7 @@ export function GeneratedCSSPanel({
             theme="eclipsa"
           />
         ) : (
-          <div className="d-f ai-c jc-c h-100% c-muted-dim ff-m">
+          <div className="d:f ai:c jc:c h:100% c:muted-dim ff:m">
             No CSS generated yet.
           </div>
         )}

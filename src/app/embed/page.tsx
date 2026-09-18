@@ -21,20 +21,20 @@ const Embed: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="d-f ai-c jc-c h-dvh bg-surface c-white">
-        <div className="fs-lg">Loading…</div>
+      <div className="d:f ai:c jc:c h:dvh bg:surface c:white">
+        <div className="fs:lg">Loading…</div>
       </div>
     );
   }
 
   return (
-    <div className="d-f fd-c h-dvh bg-page">
-      <div className="d-f fd-c o-h f-1 @md:fd-r">
-        <div className="o-h h-50% @md:h-100% @md:w-50%">
+    <div className="d:f fd:c h:dvh bg:page">
+      <div className="d:f fd:c o:h f:1 @md:fd:r">
+        <div className="o:h h:50% @md:h:100% @md:w:50%">
           <MonacoEditor code={code} onChange={setCode} />
         </div>
 
-        <div className="btw-1 bc-border h-50% @md:btw-0 @md:blw-1 @md:h-100% @md:w-50%">
+        <div className="btw:1 bc:border h:50% @md:btw:0 @md:blw:1 @md:h:100% @md:w:50%">
           <Preview ref={iframeRef} code={code} />
         </div>
       </div>
@@ -43,9 +43,9 @@ const Embed: React.FC = () => {
         href={`/?code=${encodeURIComponent(code)}`}
         target="_blank"
         rel="noreferrer"
-        className="d-f ai-c jc-c g-2 px-3 h-8 btw-1 bc-border bg-page c-accent-dim fs-xs fw-500 td-none"
+        className="d:f ai:c jc:c g:2 px:3 h:8 btw:1 bc:border bg:page c:accent-dim fs:xs fw:500 td:none"
       >
-        <OpenNewWindow className="w-4 h-4" />
+        <OpenNewWindow className="w:4 h:4" />
         Open in the Yumma CSS playground
       </a>
     </div>

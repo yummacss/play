@@ -70,11 +70,11 @@ const Navbar = ({
   const renderShareIos = () => {
     switch (shareState) {
       case "success":
-        return <Check className="w-4 h-4" />;
+        return <Check className="w:4 h:4" />;
       case "error":
-        return <LinkSlash className="w-4 h-4" />;
+        return <LinkSlash className="w:4 h:4" />;
       default:
-        return <Copy className="w-4 h-4" />;
+        return <Copy className="w:4 h:4" />;
     }
   };
 
@@ -90,9 +90,9 @@ const Navbar = ({
   };
 
   return (
-    <div className="d-f ai-c jc-sb px-3 py-2 bg-surface">
+    <div className="d:f ai:c jc:sb px:3 py:2 bg:surface">
       <Image
-        className="h-auto"
+        className="h:auto"
         height={30}
         width={30}
         src="/logo-dark.svg"
@@ -101,11 +101,11 @@ const Navbar = ({
         priority
       />
 
-      <div className="d-f ai-c g-2">
+      <div className="d:f ai:c g:2">
         <Button
           type="button"
           onClick={handleShare}
-          className="d-f ai-c g-2 px-4 py-1 bc-border bg-transparent c-accent bw-1 fs-sm tp-c tdu-150 ttf-io h:c-white"
+          className="d:f ai:c g:2 px:4 py:1 bc:border bg:transparent c:accent bw:1 fs:sm tp:c tdu:150 ttf:io h:c:white"
         >
           {renderShareIos()}
           <span>{getShareLabel()}</span>

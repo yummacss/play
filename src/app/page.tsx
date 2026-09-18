@@ -52,17 +52,17 @@ const Home: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="d-f ai-c jc-c h-dvh bg-surface c-white">
-        <div className="ta-c">
-          <div className="fs-lg">Loading…</div>
+      <div className="d:f ai:c jc:c h:dvh bg:surface c:white">
+        <div className="ta:c">
+          <div className="fs:lg">Loading…</div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="h-dvh">
-      <Group orientation="horizontal" className="h-100%">
+    <div className="h:dvh">
+      <Group orientation="horizontal" className="h:100%">
         <Panel
           panelRef={editorPanelRef}
           collapsible
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
           minSize="20%"
           defaultSize="50%"
         >
-          <div className="d-f fd-c h-100%">
+          <div className="d:f fd:c h:100%">
             <Navbar
               code={code}
               editorRef={editorRef}
@@ -78,10 +78,10 @@ const Home: React.FC = () => {
               onFullPreview={handleFullPreview}
             />
 
-            <div className="o-h f-1">
+            <div className="o:h f:1">
               <Group
                 orientation="vertical"
-                className="h-100%"
+                className="h:100%"
                 onLayoutChange={(layout) =>
                   setCssPanelOpen((layout.css ?? 0) > 0)
                 }
@@ -96,7 +96,7 @@ const Home: React.FC = () => {
                   />
                 </Panel>
 
-                <Separator className="h-px bg-border c-rr" />
+                <Separator className="h:px bg:border c:rr" />
 
                 <Panel
                   id="css"
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
                   collapsible
                   minSize="10%"
                   defaultSize="0%"
-                  className="o-h"
+                  className="o:h"
                 >
                   <GeneratedCSSPanel
                     iframeRef={iframeRef}
@@ -118,10 +118,10 @@ const Home: React.FC = () => {
               <Button
                 type="button"
                 onClick={handleToggleCSSPanel}
-                className="d-f ai-c g-2 fs-0 px-3 w-100% h-8 bc-border bg-page btw-1 bw-0 c-p"
+                className="d:f ai:c g:2 fs:0 px:3 w:100% h:8 bc:border bg:page btw:1 bw:0 c:p"
               >
-                <NavArrowDown className="c-muted" />
-                <span className="c-accent-dim ff-m tt-u ls-4 fw-500 fs-xs">
+                <NavArrowDown className="c:muted" />
+                <span className="c:accent-dim ff:m tt:u ls:4 fw:500 fs:xs">
                   Generated CSS
                 </span>
               </Button>
@@ -129,7 +129,7 @@ const Home: React.FC = () => {
           </div>
         </Panel>
 
-        <Separator className="w-px bg-border c-cr" />
+        <Separator className="w:px bg:border c:cr" />
 
         <Panel defaultSize="50%" minSize="20%" maxSize="80%">
           <Preview ref={iframeRef} code={code} />
