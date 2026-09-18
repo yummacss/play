@@ -25,7 +25,7 @@
     "@vercel/analytics": "^2.0.1",
     "@vercel/kv": "^3.0.0",
     "@vercel/speed-insights": "^2.0.0",
-    "@yummacss/intellisense": "^3.31.1",
+    "@yummacss/intellisense": "^4.0.0",
     "emmet-monaco-es": "^5.7.0",
     "iconoir-react": "^7.11.1",
     "lz-string": "^1.5.0",
@@ -42,18 +42,18 @@
     "@types/node": "^26.1.0",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
-    "@yummacss/canon": "^3.31.1",
-    "@yummacss/postcss": "^3.31.1",
+    "@yummacss/lint": "^4.0.0",
+    "@yummacss/postcss": "^4.0.0",
     "sort-package-json": "^4.0.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.10",
-    "yummacss": "^3.31.1"
+    "yummacss": "^4.0.0"
   },
+  "packageManager": "pnpm@10.32.1",
   "pnpm": {
     "overrides": {
-      "@yummacss/core": "^3.27.0",
-      "@yummacss/nitro": "^3.27.0"
+      "@yummacss/core": "^4.0.0",
+      "@yummacss/nitro": "^4.0.0"
     }
-  },
-  "packageManager": "pnpm@10.32.1"
+  }
 }

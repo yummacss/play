@@ -38,7 +38,7 @@ function MonacoEditor({ code, onChange, onMount }: MonacoEditorProps) {
   };
 
   return (
-    <div className="h-100% btw-1 bc-border">
+    <div className="h:100% btw:1 bc:border">
       <Editor
         value={code}
         language="html"
