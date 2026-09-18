@@ -15,7 +15,7 @@ const Preview = forwardRef<HTMLIFrameElement, PreviewProps>(({ code }, ref) => {
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@yummacss/runtime@${RUNTIME_VERSION}"></script>
+    <script src="https://unpkg.com/@yummacss/cdn@${RUNTIME_VERSION}"></script>
   </head>
   <style> html, body { background-color: white; } </style>
   <body>${code}</body>

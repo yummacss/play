@@ -4,7 +4,7 @@ const { devDependencies } = createRequire(import.meta.url)("./package.json");
 const runtimeVersion = devDependencies.yummacss.replace(/^\D*/, "");
 if (!/^\d+\.\d+\.\d+/.test(runtimeVersion)) {
   throw new Error(
-    `Cannot read a runtime version from "${devDependencies.yummacss}".`,
+    `Cannot read a cdn version from "${devDependencies.yummacss}".`,
   );
 }
 
