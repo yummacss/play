@@ -6,7 +6,7 @@ interface PreviewProps {
   code: string;
 }
 
-const RUNTIME_VERSION = process.env.NEXT_PUBLIC_RUNTIME_VERSION;
+const CDN_VERSION = process.env.NEXT_PUBLIC_CDN_VERSION;
 
 const Preview = forwardRef<HTMLIFrameElement, PreviewProps>(({ code }, ref) => {
   const srcdoc = useMemo(
@@ -15,7 +15,7 @@ const Preview = forwardRef<HTMLIFrameElement, PreviewProps>(({ code }, ref) => {
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/@yummacss/cdn@${RUNTIME_VERSION}"></script>
+    <script src="https://unpkg.com/@yummacss/cdn@${CDN_VERSION}"></script>
   </head>
   <style> html, body { background-color: white; } </style>
   <body>${code}</body>

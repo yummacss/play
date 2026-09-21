@@ -1,8 +1,8 @@
 import { createRequire } from "node:module";
 
 const { devDependencies } = createRequire(import.meta.url)("./package.json");
-const runtimeVersion = devDependencies.yummacss.replace(/^\D*/, "");
-if (!/^\d+\.\d+\.\d+/.test(runtimeVersion)) {
+const cdnVersion = devDependencies.yummacss.replace(/^\D*/, "");
+if (!/^\d+\.\d+\.\d+/.test(cdnVersion)) {
   throw new Error(
     `Cannot read a cdn version from "${devDependencies.yummacss}".`,
   );
@@ -10,7 +10,7 @@ if (!/^\d+\.\d+\.\d+/.test(runtimeVersion)) {
 
 const nextConfig = {
   env: {
-    NEXT_PUBLIC_RUNTIME_VERSION: runtimeVersion,
+    NEXT_PUBLIC_CDN_VERSION: cdnVersion,
   },
 
   async headers() {
